@@ -1,0 +1,10 @@
+services:
+  node:
+    image: node:20-alpine
+    working_dir: /app
+    user: node
+    volumes:
+      - .:/app
+    ports:
+      - 5000:5000
+    command: sh -c 'tail -f /dev/null'
